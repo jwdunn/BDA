@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/hello"
+        android:textSize="25sp"
+        android:textStyle="italic"
+        android:typeface="serif" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.2"
+        android:orientation="vertical" >
+        
+        <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/users_order"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        android:typeface="serif" />
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/keypad"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:stretchColumns="*" >
+
+        <TableRow >
+
+            <Button
+                android:id="@+id/get_image"
+                android:text="@string/scan_id" >
+            </Button>
+
+            <Button
+                android:id="@+id/get_signature"
+                android:text="@string/signature" >
+            </Button>
+        </TableRow>
+
+        <TableRow >
+
+            <Button
+                android:id="@+id/get_image"
+                android:text="@string/scan_id" >
+            </Button>
+
+            <Button
+                android:id="@+id/card5"
+                android:text="@string/cancel_order" >
+            </Button>
+        </TableRow>
+    </TableLayout>
+
+    <ImageView
+        android:id="@+id/imagecaptured"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

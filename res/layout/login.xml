@@ -1,0 +1,70 @@
+<RelativeLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+     android:layout_width="fill_parent"
+     android:layout_height="fill_parent"
+
+      android:background="#FFFFFF"
+      android:fadingEdge="horizontal">
+     <TextView 
+            android:id="@+id/text"
+            android:text="BeerDropper"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:typeface="serif"
+            android:textStyle="italic"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="50dip"
+            android:textSize="25sp">
+     </TextView>
+     <EditText
+            android:id="@+id/username"
+            android:layout_width="213dip"
+            android:layout_marginTop="60dp"
+            android:layout_below ="@+id/text"
+            android:layout_centerHorizontal="true"
+            android:layout_height="wrap_content"
+            android:hint="username"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:typeface="sans"
+            android:textStyle="italic">
+     </EditText>
+     <EditText
+            android:id="@+id/password"
+            android:layout_width="213dip"
+            android:layout_height="wrap_content"
+            android:hint="password"
+            android:textSize="18sp"
+            android:typeface="sans"
+            android:textStyle="italic"
+            android:gravity="center"
+            android:password="true"
+            android:layout_marginTop="20dp"
+            android:layout_below ="@+id/username"
+            android:layout_centerHorizontal="true">
+     </EditText>
+
+     <CheckBox
+            android:id="@+id/check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Remember me"
+            android:layout_marginTop="10dp"
+            android:layout_below ="@+id/password"
+            android:layout_centerHorizontal="true">
+     </CheckBox>
+     <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Login / Sign Up"
+            android:textSize="22sp"
+            android:typeface="serif"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_below ="@+id/check"
+            android:layout_centerHorizontal="true">
+     </Button>
+
+</RelativeLayout>

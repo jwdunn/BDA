@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Welcome to Beer Dropper!</string>
+    <string name="app_name">BeerDropper</string>
+    <string name="users_order">This will Be and Order</string>
+    
+        
+        
+    <!-- Button Names When Delivery Clicked On Order.java -->
+    <string name= "drop_off">Drop Off</string>
+    <string name="get_directions">Get Directions</string>
+    <string name="cancel_order">Cancel order</string>
+    <string name="call_customer">Call Customer</string>
+    
+    <!-- Button Names When Dropoff clicked DropOff.java -->
+    <string name= "scan_id">Scan ID </string>  
+    <string name= "signature">Get Signature </string>  
+    <string name= "complete_order">Complete Order</string> 
+</resources>
