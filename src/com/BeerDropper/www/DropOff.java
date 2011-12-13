@@ -4,7 +4,6 @@ package com.BeerDropper.www;
 import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -47,6 +46,8 @@ public class DropOff extends Activity implements OnClickListener {
 	    			startActivityForResult(i, 0);
 	    			break;
 	    		case R.id.get_signature:
+	    			startActivity(new Intent(this,ManualSignActivity.class));
+	    			break;
 			}
 	};
 
