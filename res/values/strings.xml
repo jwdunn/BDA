@@ -16,4 +16,15 @@
     <string name= "scan_id">Scan ID </string>  
     <string name= "signature">Get Signature </string>  
     <string name= "complete_order">Complete Order</string> 
+    <string name="etc">etc</string>
+    
+     <!-- **Signature Menu Items** -->
+    <string name="reset_label">Reset</string>
+    <string name="change_pen_color">Pen Color</string>
+    <string name="save_label">Save</string>
+   
+    <string name="black_label">Black</string>
+    <string name="red_label">Red</string>
+    <string name="green_label">Green</string>
+    <string name="blue_label">Blue</string>
 </resources>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/reset_label"
+        android:title="@string/reset_label">
+    </item>
+     <item
+        android:id="@+id/save_label"
+        android:title="@string/save_label">
+    </item>
+    <item
+        android:id="@+id/change_pen_color"
+        android:title="@string/change_pen_color">
+        <menu>
+            <item
+                android:id="@+id/black_label"
+                android:title="@string/black_label">
+            </item>
+            <item
+                android:id="@+id/blue_label"
+                android:title="@string/blue_label">
+            </item>
+            <item
+                android:id="@+id/green_label"
+                android:title="@string/green_label">
+            </item>
+            <item
+                android:id="@+id/red_label"
+                android:title="@string/red_label">
+            </item>
+        </menu>
+    </item>
+</menu>

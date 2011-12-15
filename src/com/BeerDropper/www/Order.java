@@ -1,10 +1,7 @@
 package com.BeerDropper.www;
 
-
-
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -54,13 +51,11 @@ public class Order extends Activity implements OnClickListener {
 				Intent dial = new Intent(Intent.ACTION_DIAL, number);
 				startActivity(dial);
 				startActivity(Intent.createChooser(dial, "select dialer"));
+    			//startActivity(new Intent(this,ManualSignActivity.class));
+
 				break;	
 	    	}
-		
+
 	};
 
 }
-
-
-
-

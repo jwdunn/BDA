@@ -59,7 +59,7 @@
             </Button>
 
             <Button
-                android:id="@+id/card5"
+                android:id="@+id/cancel_order"
                 android:text="@string/cancel_order" >
             </Button>
         </TableRow>

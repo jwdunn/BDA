@@ -52,14 +52,12 @@
         </TableRow>
 
         <TableRow >
-
             <Button
-                android:id="@+id/get_image"
-                android:text="@string/scan_id" >
+                android:id="@+id/signature"
+                android:text="@string/etc" >
             </Button>
-
             <Button
-                android:id="@+id/card5"
+                android:id="@+id/cancel_order"
                 android:text="@string/cancel_order" >
             </Button>
         </TableRow>
