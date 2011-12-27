@@ -54,7 +54,7 @@
         <TableRow >
             <Button
                 android:id="@+id/signature"
-                android:text="@string/etc" >
+                android:text="etc" >
             </Button>
             <Button
                 android:id="@+id/cancel_order"

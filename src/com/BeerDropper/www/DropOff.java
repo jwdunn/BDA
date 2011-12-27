@@ -53,7 +53,6 @@ public class DropOff extends Activity implements OnClickListener {
 			break;
 		}
 	};
-
 	//This method saves the picture on the screen
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {

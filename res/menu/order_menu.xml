@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/completed_orders_label"
+        android:title="@string/completed_orders">
+    </item>
+     <item
+        android:id="@+id/new_orders_label"
+        android:title="@string/new_orders">
+    </item>
+    <item
+        android:id="@+id/deleted_orders_label"
+        android:title="@string/deleted_orders">
+       
+    </item>
+</menu>
