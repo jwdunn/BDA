@@ -3,10 +3,11 @@ package com.BeerDropper.www;
 
 import java.util.ArrayList;
 import java.util.List;
+
 import android.app.ListActivity;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.view.Gravity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -15,9 +16,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
+import android.content.Intent;
 
 /**
  * Creates a list of orders that are pulled from the server
@@ -27,8 +26,8 @@ public class DisplayOrdersDemo extends ListActivity {
 
 	private static List<Order> orderList;
 	private OrderAdapter mOrderAdapter;
-	
-	
+
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -36,7 +35,7 @@ public class DisplayOrdersDemo extends ListActivity {
 
 		//Load List from the local database at this point
 		TestData t1=new TestData();
-		
+
 		mOrderAdapter=new OrderAdapter(t1.getTestData());
 		setListAdapter(mOrderAdapter);
 	}
@@ -52,8 +51,8 @@ public class DisplayOrdersDemo extends ListActivity {
 	 */
 	private class OrderAdapter extends BaseAdapter {
 
-		private ArrayList<Order> orderList;
-	
+	//	private ArrayList<Order> orderList;
+
 		public OrderAdapter(ArrayList<Order> orders){
 			orderList=orders;
 		}
@@ -99,37 +98,23 @@ public class DisplayOrdersDemo extends ListActivity {
 			return result;
 		}
 	}
-	
+
 	@Override
 	protected void onListItemClick(ListView l, View v, int position, long id) {
-		AlertDialog.Builder welcome = new AlertDialog.Builder(this);
-		//welcome.setIcon(R.drawable.beerdrooper);
-		
-		final int p=position; //position of order
-		welcome.setTitle(getString(R.string.view_order_details));
-		welcome.setMessage(orderList.get(position).toString());
-		welcome.setPositiveButton("Delete?",new DialogInterface.OnClickListener() {
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				// TODO Update server database about order status
-				//remove from local database
-				//update adapter
-			//	orderList.remove(p);
-	           mOrderAdapter.notifyDataSetChanged();
-			}	
-		});
-		welcome.setNegativeButton("Process", new DialogInterface.OnClickListener() {
-			
-			@Override
-			public void onClick(DialogInterface dialog, int which) {
-				// TODO Auto-generated method stub
-				Toast msg = Toast.makeText(DisplayOrdersDemo.this, "BUSTED, UNDER 21", Toast.LENGTH_LONG);
+		Log.d("on list item click", "position"+position);
+		Intent i = new Intent(this, OrderActivity.class);
+		i.putExtra("userID", orderList.get(position).getCustomer().getId());
+		i.putExtra("userName", orderList.get(position).getCustomer().getName());
+		i.putExtra("address",orderList.get(position).getCustomer().getAddress());
+		i.putExtra("phoneNumber", orderList.get(position).getCustomer().getPhone());
+		startActivity(i);
 
-				msg.setGravity(Gravity.CENTER, msg.getXOffset() / 2, msg.getYOffset() / 2);
+//				// TODO Update server database about order status
+//				//remove from local database
+//				//update adapter
+//				//	orderList.remove(p);
+//				mOrderAdapter.notifyDataSetChanged();
 
-				msg.show();
-			}
-		}).show();
 	}
 	/**
 	 *   Inflate menu items in the order activity
@@ -159,5 +144,5 @@ public class DisplayOrdersDemo extends ListActivity {
 		}
 		return true;
 	}
-	   
+
 }
